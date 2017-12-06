@@ -1,0 +1,19 @@
+language: generic
+
+
+branches:
+  only:
+    - master
+
+script:
+  - mkdir _site
+  - cp GNUmakefile _site
+  - find . -type f -name '*.mk' | xargs cp -t _site
+
+deploy:
+  local_dir: _site
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
