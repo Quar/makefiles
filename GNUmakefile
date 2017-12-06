@@ -14,7 +14,7 @@ CC_LANG := $(if $(CC_LANG),$(CC_LANG),$(call guess_lang))
 INCLUDE_MK = remote.$(CC_LANG).mk
 
 # REMOTE BASE
-DEFAULT_MK_FILE_LOC := quar.gitlab.io/makefiles
+DEFAULT_MK_FILE_LOC := quar.github.io/makefiles
 MK_FILE_LOC := $(if $(MK_FILE_LOC),$(MK_FILE_LOC),$(DEFAULT_MK_FILE_LOC))
 MK_FILE_PATH = $(MK_FILE_LOC)/$(INCLUDE_MK)
 
